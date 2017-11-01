@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html>
+	
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="style_page2.css" />
+		<title>CSS3</title>
+	</head>
+
+	<body>
+
+		<header id="start">
+			<h1>Propriétés CSS3</h1>
+		</header>
+
+		<section>
+			<span class="article1">
+			<h2>Sommaire :</h2>
+				<p>
+					<a href="#text">Propriétés texte</a><br>
+					<a href="#col">Propriétés couleur et fond</a><br>
+					<a href="#boite">Propriétés des boîtes</a><br>
+					<a href="#pos">Propriétés position et affichage</a><br>
+					<a href="#list">Propriétés des listes</a><br>
+					<a href="#tab">Propriétés des tableaux</a><br>
+					<a href="#autres">Autres propriétés</a><br>
+					<a href="#dyn">Hover, active, focus, visited</a><br>
+				</p><hr />
+			</span>
+
+			<article>
+				<h2 id="text">Propriétés texte <a href="#start" title="Sommaire">&para;</a></h2>
+				<p>
+					<ul>
+						<li><p><strong> font </strong>: Super propriété de police, combine : font-weight, font-style, font-size, font-variant, font-family.</p></li>
+						<pre><span>font</span>: bold italic 1.3em normal Times New Roman;</pre>
+
+						<li><p><strong> font-family </strong> : Nom de police.</p></li>
+						<pre><span>font-family</span>: police1, police2, police3, serif, sans-serif, monospace...;</pre>
+
+						<li><p><strong> @font-face </strong>: Police personnalisée (création).</p></li>
+						<pre><span>@font-face</span>: Nom et source de la police...;</pre>
+
+						<li><p><strong> font-size </strong>: Taille du texte.</p></li>
+						<pre><span>font-size</span>: 1.3em, 16px, 120%...;</pre>
+
+						<li><p><strong> font-weight </strong>: Gras.</p></li>
+						<pre><span>font-weight</span>: bold, normal;</pre>
+
+						<li><p><strong> font-style </strong>: Italique.</p></li>
+						<pre><span>font-style</span>: italic, oblique, normal;</pre>
+
+						<li><p><strong> font-variant </strong>: Petites capitales. </p></li>
+						<pre><span>font-variant</span>: small-caps, normal;</pre>
+
+						<li><p><strong> text-decoration </strong>: Soulignement, ligne au dessu, barré, clignotant.</p></li>
+						<pre><span>text-decoration</span>: underline, overline, line-through, blink, none;</pre>
+
+						<li><p><strong> text-transform </strong>: Capitales.</p></li>
+						<pre><span>text-transform</span>: capitalize, lowercase, uppercase;</pre>
+
+						<li><p><strong> text-align </strong>: Alignement horizontal.</p></li>
+						<pre><span>text-align</span>: left, center, right, justify;</pre>
+
+						<li><p><strong> text-indent </strong>: Alinéa.</p></li>
+						<pre><span>text-indent</span>: 25px...;</pre>
+
+						<li><p><strong> text-shadow </strong>: Ombre de texte.</p></li>
+						<pre><span>text-shadow</span>: 5px 5px 5px blue; (horizontale, verticale, fondu, couleur)</pre>
+
+						<li><p><strong> vertical-align </strong>: Alignement vertical (cellules tableau ou éléments inline-block uniquement).</p></li>
+						<pre><span>vertical-align</span>: baseline, middle, sub, super, top, bottom;</pre>
+
+						<li><p><strong> white-space </strong>: Césure.</p></li>
+						<pre><span>white-space</span>: pre, nowrap, normal;</pre>
+
+						<li><p><strong> word-wrap </strong>: Césure forcée.</p></li>
+						<pre><span>word-wrap</span>: break-word, normal;</pre>
+					</ul>
+				</p>
+
+				<h2 id="col">Propriétés couleur et fond <a href="#start" title="Sommaire">&para;</a></h2>
+				<p>
+					<ul>
+						<li><p><strong> background </strong>: Super propriété du fond, combine : background-image, background-repeat, background-attachment, background-position.</p></li>
+						<pre><span>background</span>: url('image.png) repeat fixed center;</pre>
+
+						<li><p><strong> background-color </strong>: Couleur de FOND.</p></li>
+						<pre><span>background-color</span>: couleur, rgb(x,y,z, transparence), rgba(x,y,z, transparence), #CF1A20...;</pre>
+
+						<li><p><strong> background-image </strong>: Image de fond.</p></li>
+						<pre><span>background-image</span>: url('image.png');</pre>
+
+						<li><p><strong> background-attachment </strong>: Fond fixe ou non.</p></li>
+						<pre><span>background-attachment</span>: fixed, scroll;</pre>
+
+						<li><p><strong> background-repeat </strong>: Répétition du fond.</p></li>
+						<pre><span>background-repeat</span>: repeat-x, repeat-y, no-repeat, repeat;</pre>
+
+						<li><p><strong> background-position </strong>: Position du fond.</p></li>
+						<pre><span>background-position</span>: (x,y), top, center, bottom, left, right;</pre>
+
+						<li><p><strong> color </strong>: Couleur du texte.</p></li>
+						<pre><span>color</span>: nomcouleur, rgb(x,y,z, transparence), rgba(x,y,z, transparence), #CF1A20...;</pre>
+
+						<li><p><strong> opacity </strong>: Transparence.</p></li>
+						<pre><span>opacity</span>: 0.5...;</pre>
+					</ul>
+				</p>
+
+				<h2 id="boite">Propriétés des boites <a href="#start" title="Sommaire">&para;</a></h2>
+				<p>
+					<ul>
+						<li><p><strong> margin </strong>: Super propriété de marge, combine : margin-top, margin-right, margin-bottom, margin-left.</p></li>
+						<pre><span>margin</span>: 23px 5px 23px 5px; (haut, droite, bas, gauche)</pre>
+
+						<li><p><strong> margin-top (-left,-right,-bottom) </strong>: Marge en haut, à gauche, à droite, en bas.</p></li>
+						<pre><span>margin-top (-left,-right,-bottom)</span>: 23px;</pre>
+
+						<li><p><strong> padding </strong>: Super propriété de marge intérieure, combine : padding-top, padding-right, padding-bottom, padding-left.</p></li>
+						<pre><span>padding</span>: 23px 5px 23px 5px; (haut, droite, bas, gauche)</pre>
+
+						<li><p><strong> padding-top (-left,-right,-bottom) </strong>: Marge intérieure en haut, à gauche, à droite, en bas.</p></li>
+						<pre><span>padding-top (-left,-right,-bottom)</span>: 23px;</pre>
+
+						<li><p><strong> border </strong>: Super-propriété de bordure, combine : border-width, border-color, border-style. Existe aussi en version : border-top, border-right, border-bottom, border-left..</p></li>
+						<pre><span>border</span>: 3px solid black;</pre>
+
+						<li><p><strong> border-width </strong>: Epaisseur de bordure.</p></li>
+						<pre><span>border-width</span>: 3px;</pre>
+
+						<li><p><strong> border-color </strong>: Couleur de bordure.</p></li>
+						<pre><span>border-color</span>: nom, rgb(rouge,vert,bleu), rgba(rouge,vert,bleu,transparence), #CF1A20...;</pre>
+
+						<li><p><strong> border-radius </strong>: Bordure arrondie.</p></li>
+						<pre><span>border-radius</span>: 10px;</pre>
+
+						<li><p><strong> border-style </strong>: Type de bordure.</p></li>
+						<pre><span>border-style</span>: solid, dotted, dashed, double, groove, ridge, inset, outset;</pre>
+
+						<li><p><strong> width </strong>: Largeur.</p></li>
+						<pre><span>width</span>: 150px, 80%, 1em;</pre>
+
+						<li><p><strong> height </strong>: Hauteur.</p></li>
+						<pre><span>height</span>: 150px, 80%, 1em;</pre>
+
+						<li><p><strong> min-width (-height) </strong>: Largeur ou Hauteur minimale.</p></li>
+						<pre><span>min-width (-height)</span>: 150px, 80%, 1em;</pre>
+
+						<li><p><strong> max-width (-height) </strong>: Largeur ou Hauteur maximale.</p></li>
+						<pre><span>max-width (-height)</span>: 150px, 80%, 1em;</pre>
+
+						<li><p><strong> box-shadow </strong>: Ombre de boîte.</p></li>
+						<pre><span>box-shadow</span>: 6px 6px 0px black; (horizontale, verticale, fondu, couleur)</pre>						
+						
+					</ul>
+				</p>
+
+				<h2 id="pos">Propriétés position et affichage <a href="#start" title="Sommaire">&para;</a></h2>
+				<p>
+					<ul>
+						<li><p><strong> display </strong>: Type d'élément (block, inline, inline-block, none...).</p></li>
+						<pre><span>display</span>: block, inline, inline-block, table, table-cell, flex...;</pre>
+
+						<li><p><strong> visibility </strong>: Visibilité.</p></li>
+						<pre><span>visibility</span>: visible, hidden;</pre>
+
+						<li><p><strong> clip </strong>: Affichage d'une partie de l'élément.</p></li>
+						<pre><span>clip</span>: rect(0px, 60px, 30px, 0px); (haut, droite, bas, gauche)</pre>
+
+						<li><p><strong> overflow </strong>: Comportement en cas de dépassement.</p></li>
+						<pre><span>overflow</span>: auto, scroll, visible, hidden;</pre>
+
+						<li><p><strong> float </strong>: Flottant.</p></li>
+						<pre><span>float</span>: left, right, both, none;</pre>
+
+						<li><p><strong> clear </strong>: Arrêt d'un flottant.</p></li>
+						<pre><span>clear</span>: left, right, both, none;</pre>
+
+						<li><p><strong> position </strong>: Position.</p></li>
+						<pre><span>position</span>: relative, absolute, static;</pre>
+
+						<li><p><strong> top </strong>: Position par rapport au haut.</p></li>
+						<pre><span>top</span>: 20px;</pre>
+
+						<li><p><strong> bottom </strong>: Position par rapport au bas.</p></li>
+						<pre><span>bottom</span>: 20px;</pre>
+
+						<li><p><strong> left </strong>: Position par rapport à la gauche.</p></li>
+						<pre><span>left</span>: 20px;</pre>
+
+						<li><p><strong> right </strong>: Position par rapport à la droite.</p></li>
+						<pre><span>right</span>: 20px;</pre>
+
+						<li><p><strong> z-index </strong>: Ordre d'affichage en cas de superposition.
+						La plus grande valeur est affichée par-dessus les autres.</p></li>
+						<pre><span>z-index</span>: 10;</pre>
+					</ul>
+				</p>
+
+				<h2 id="list">Propriétés des listes <a href="#start" title="Sommaire">&para;</a></h2>
+				<p>
+					<ul>
+						<li><p><strong> list-style </strong>: Super-propriété de liste, combine : list-style-type, list-style-position, list-style-image.</p></li>
+						<pre><span>list-style</span>: disc inside url('puce.png');</pre>
+
+						<li><p><strong> list-style-type </strong>: Type de liste.</p></li>
+						<pre><span>list-style-type</span>: disc, circle, square, decimal, lower-roman, upper-roman, lower-alpha, upper-alpha, none;</pre>
+
+						<li><p><strong> list-style-position </strong>: Position en retrait.</p></li>
+						<pre><span>list-style-position</span>: inside, outside;</pre>
+
+						<li><p><strong> list-style-image </strong>: Puce personnalisée.</p></li>
+						<pre><span>list-style-image</span>: url('puce.png') </pre>
+					</ul>
+				</p>
+
+				<h2 id="tab">Propriétés des tableaux <a href="#start" title="Sommaire">&para;</a></h2>
+				<p>
+					<ul>
+						<li><p><strong> border-collapse </strong>: Fusion des bordures.</p></li>
+						<pre><span>border-collapse</span>: collapse, separate;</pre>
+
+						<li><p><strong> empty-cells </strong>: Affichage des cellules vides.</p></li>
+						<pre><span>empty-cells</span>: hide, show;</pre>
+
+						<li><p><strong> caption-side </strong>: Position du titre du tableau.</p></li>
+						<pre><span>caption-side</span>: bottom, top;</pre>
+					</ul>
+				</p>
+
+				<h2 id="autres">Autres propriétés <a href="#start" title="Sommaire">&para;</a></h2>
+				<p>
+					<ul>
+						<li><p><strong> cursor </strong>: Curseur de souris.</p></li>
+						<pre><span>cursor</span>: crosshair, default, help, move, pointer, progress, text, wait, e-resize, ne-resize, auto...;</pre>
+					</ul>
+				</p>
+
+				<h2 id="dyn">Hover, active, focus, visited <a href="#start" title="Sommaire">&para;</a></h2>
+				<p>
+					<ul>
+						<li><p><strong> hover </strong>: Apparence au survol des liens.</p></li>
+						<pre><span>a:hover</span></pre>
+						<pre>{</pre>
+						<pre>   text-decoration: underline;</pre>
+						<pre>   color: green;</pre>
+						<pre>}</pre>
+					</ul>
+					<ul>
+						<li><p><strong> active </strong>: Au moment du clic.</p></li>
+						<pre><span>a:active</span></pre>
+						<pre>{</pre>
+						<pre>   background-color: #FFCC66;</pre>
+						<pre>}</pre>
+					</ul>
+					<ul>
+						<li><p><strong> focus </strong>: Lorsque l'élément est sélectionné.</p></li>
+						<pre><span>a:focus</span></pre>
+						<pre>{</pre>
+						<pre>   background-color: #FFCC66;</pre>
+						<pre>}</pre>
+					</ul>
+					<ul>
+						<li><p><strong> visited </strong>: Lorsque le lien a déjà été visité.</p></li>
+						<pre><span>a:visited</span></pre>
+						<pre>{</pre>
+						<pre>   color: #FFCC66;</pre>
+						<pre>}</pre>
+					</ul>
+				</p>	
+
+
+			</article>
+
+			<footer>
+				<p><a href="#start" title="Haut de page">Début de page</a></p>
+				<p><a href="..\Page_Accueil.html" title="Retourner à l'Accueil">Retour à l'Accueil</a></p>
+			</footer>
+
+		</section>
+
+	</body>
+
+</html>

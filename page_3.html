@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html>
+	
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="style_page3.css" />
+		<title>HTML</title>
+	</head>
+
+	<body>
+		
+	<header id="start">
+		<h2>Flexbox</h2>
+	</header>
+
+	<section>
+		<span class="article1">
+		<h2 id="deb">Sommaire :</h2>
+			<p>
+				<a href="#div">Balise Div</a><br>
+				<a href="#cont">Conteneur</a><br>
+				<a href="#elem">Elements</a><br>
+			</p><hr />
+		</span>
+
+		<article>
+			<h2 id="div">Balise Div <a href="#start" title="Sommaire">&para;</a></h2>
+			<span class="cont1">Tout d'abord, il faut créer un conteneur qui contiendra les élements.<br>
+								On crée une balise div avec <strong>id="conteneur"</strong>, dans cette balise, nous créons d'autres balises div avec <strong>class="element"</strong> qui ont tous la même classe, mais il est possible d'en choisir des différents. Ces div sont autour des sections ou bloc de textes que vous voulez organiser. Vous pourrez ainsi les déplacer en colonnes, en lignes, etc...facilement.</span>
+				<p>
+					<ul>
+						<li><p>&lt;<strong class="rouge"> div </strong>&gt;: Balise universelle.</p></li>
+						<pre>&lt;<span class="rouge">div</span> <span class="jaune">id="conteneur"</span>&gt;
+	&lt;<span class="rouge">div</span> <span class="jaune">class<span class="rouge">=</span>"element"</span>&gt;Elément 1&lt;/<span class="rouge">div</span>&gt;
+	&lt;<span class="rouge">div</span> <span class="jaune">class<span class="rouge">=</span>"element"</span>&gt;Elément 2&lt;/<span class="rouge">div</span>&gt;
+	&lt;<span class="rouge">div</span> <span class="jaune">class<span class="rouge">=</span>"element"</span>&gt;Elément 3&lt;/<span class="rouge">div</span>&gt;
+&lt;/<span class="rouge">div</span>&gt;</pre>
+					</ul>
+				</p>
+
+			<h2 id="cont">Conteneur <a href="#start" title="Sommaire">&para;</a></h2>
+				<span class="cont1">
+					Dans le fichier .css, on applique à <strong>#conteneur</strong> différents paramètres influant sur tous les div à l'intérieur du DIV avec <strong>id="conteneur"</strong>. On manie tous les blocs de div, toutes les sections signalées par div en modifiant #conteneur.
+				</span>
+
+				<p>
+					<ul>
+						<li><span>Bloc côte à côte </span></li>
+						<pre><span class="rouge">#conteneur</span>
+{
+	<span class="bleu1">display:</span><span class="bleu">flex</span>;
+}
+						</pre>
+
+						<li><span>Direction d'organisation des blocs </span>: <span style="font-style: italic;font-weight: bold;"> row</span> (ligne), <span style="font-style: italic;font-weight: bold;">column</span> (colonne), <span style="font-style: italic;font-weight: bold;">row-reverse</span> (ligne ordre inversé), <span style="font-style: italic;font-weight: bold;">column-reverse</span> (colonne ordre inversé)</li>
+						<pre><span class="rouge">#conteneur</span>
+{
+	<span class="bleu1">display:</span><span class="bleu"> flex</span>;
+	<span class="bleu1">flex-direction:</span><span class="bleu"> column</span>;
+}</pre>
+
+						<li><span>Retour à la ligne </span>: <span style="font-style: italic;font-weight: bold;">nowrap</span> (les elements se resserrent au max), <span style="font-style: italic;font-weight: bold;">wrap</span> (element passe à la ligne quand plus de place), <span style="font-style: italic;font-weight: bold;">wrap-reverse</span></li>
+						<pre><span class="rouge">#conteneur</span>
+{
+	<span class="bleu1">display:</span><span class="bleu"> flex</span>;
+	<span class="bleu1">flex-wrap:</span><span class="bleu"> wrap</span>;
+}</pre>
+
+						<li><span>Alignemer sur l'axe principal </span>: <span style="font-style: italic;font-weight: bold;">flex-start</span> (alignés au début), <span style="font-style: italic;font-weight: bold;">flex-end</span> (alignés à la fin), <span style="font-style: italic;font-weight: bold;">center</span> (alignés au centre), <span style="font-style: italic;font-weight: bold;">space-between</span> (espace entre chaque bloc, sur tout l'espace), <span style="font-style: italic;font-weight: bold;">space-around</span> (même chose + espace extrémités)</li>
+						<pre><span class="rouge">#conteneur</span>
+{
+	<span class="bleu1">display:</span><span class="bleu"> flex</span>;
+	<span class="bleu1">justify-content:</span><span class="bleu"> space-around</span>;
+}</pre>
+
+						<li><span>Aligner sur l'axe secondaire </span>: <span style="font-style: italic;font-weight: bold;">stretch</span> (défaut), <span style="font-style: italic;font-weight: bold;">flex-start</span> (alignés au début), <span style="font-style: italic;font-weight: bold;">flex-end</span> (alignés à la fin), <span style="font-style: italic;font-weight: bold;">center</span> (alignés au centre), <span style="font-style: italic;font-weight: bold;">baseline</span> (alignés sur la ligne de base)</li>
+						<pre><span class="rouge">#conteneur</span>
+{
+	<span class="bleu1">display:</span><span class="bleu"> flex</span>;
+	<span class="bleu1">justify-content:</span><span class="bleu"> center</span>;
+	<span class="bleu1">align-items:</span><span class="bleu"> center</span>;
+}</pre>
+					</ul>
+				</p>
+
+			<h2 id="elem">Elements <a href="#start" title="Sommaire">&para;</a></h2>
+				<span class="cont1">
+					On gère désormais un seul ou un nombre fixe d'éléments. Dans notre cas, ils portent tous la même classe.
+				</span>
+
+				<p>
+					<ul>
+						<li><span>Aligner un seul élement (ici l'élement 2 à la fin)</span></li>
+						<pre><span class="rouge">#conteneur</span>
+{
+	<span class="bleu1">display:</span><span class="bleu"> flex</span>;
+	<span class="bleu1">flex-direction:</span><span class="bleu"> row</span>;
+	<span class="bleu1">justify-content:</span><span class="bleu"> center</span>;
+	<span class="bleu1">align-items:</span><span class="bleu"> center</span>;
+}
+
+<span class="jaune">.element:nth-child</span>(2)
+{
+	<span class="bleu1">align-self:</span><span class="bleu"> flex-end</span>;
+	<span class="bleu1">background-color:</span><span class="bleu"> blue</span>;
+}</pre>
+
+						<li><span>Gérer l'ordre des élements</span></li>
+						<pre><span class="jaune">.element:nth-child</span>(1)
+{
+	<span class="bleu1">order:</span><span class="bleu"> 3</span>;
+}
+<span class="jaune">.element:nth-child</span>(2)
+{
+	<span class="bleu1">order:</span><span class="bleu"> 1</span>;
+}
+<span class="jaune">.element:nth-child</span>(3)
+{
+	<span class="bleu1">order:</span><span class="bleu"> 2</span>;
+}</pre>
+						<li><span>Allonger un bloc, le réduire (ici, l'élement 1 est 2 fois plus long)</span></li>
+						<pre><span class="jaune">.element:nth-child</span>(1)
+{
+	<span class="bleu1">flex:</span><span class="bleu"> 2</span>;
+}
+<span class="jaune">.element:nth-child</span>(2)
+{
+	<span class="bleu1">flex:</span><span class="bleu"> 1</span>;
+}
+<span class="jaune">.element:nth-child</span>(3)
+{
+	<span class="bleu1">flex:</span><span class="bleu"> 1</span>;
+}</pre>
+					</ul>
+				</p>
+
+
+
+		</article>
+
+	</section>
+
+	<footer>
+		<p><a href="#start" title="Haut de page">Début de page</a></p>
+		<p><a href="..\Page_Accueil.html" title="Retourner à l'Accueil">Retour à l'Accueil</a></p>
+	</footer>
+
+
+
+
+	</body>
+
+
+</html>

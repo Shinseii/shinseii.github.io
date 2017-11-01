@@ -1,0 +1,44 @@
+
+html
+{
+	background: #E0CEBA;
+	
+}
+
+header
+{
+	background-color: #F0DADD;
+	padding: 10px;
+	text-align: center;
+	border-left: 4px solid;
+	border-right: 4px solid;
+	border-top: 4px solid;
+	border-bottom: 4px solid;
+	border-radius: 10px;
+}
+
+a:visited
+{
+	color: #0000FF;
+}
+
+.article1
+{
+	text-align: center;
+}
+
+article h2
+{
+	color: blue;
+	text-decoration: underline;
+}
+
+strong
+{
+	color: red;
+}
+
+footer
+{
+	text-align: center;
+}
